@@ -75,11 +75,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#welcome-to-mkdocs" class="md-skip">
-          跳转至
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -212,6 +207,7 @@
     <div class="md-container" data-md-component="container">
       
       
+
         
           
             
@@ -244,6 +240,123 @@
           
         
       
+<style>
+  .md-header {
+    position: initial
+  }
+
+  .md-main__inner {
+    margin: 0
+  }
+
+  .md-content {
+    display: none
+  }
+
+  body {
+    background-color: rgb(31, 48, 85);
+    /* 设置背景颜色为黑色 */
+    color: white;
+    /* 设置文字颜色为白色 */
+  }
+
+  @media screen and (min-width:60em) {
+    .md-sidebar--secondary {
+      display: none
+    }
+  }
+
+  @media screen and (min-width:76.25em) {
+    .md-sidebar--primary {
+      display: none·
+    }
+  }
+</style>
+<link href="stylesheets/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<section class="hero" id="hero">
+  <h2 class="typewriter hero_header" id="typewriter-header">JY-HF <span class="light">Learning Site___</span>
+  </h2>
+  <br>
+  <p class="typewriter tagline" id="typewriter-tagline">Share the knowledge to you and <span class="blue">Us</span></p>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function typeWriter(element, text, speed, callback) {
+      let i = 0;
+      let isTag = false;
+      let temp = '';
+
+      function type() {
+        if (i < text.length) {
+          let char = text.charAt(i);
+          temp += char;
+
+          if (char === '<') {
+            isTag = true;
+          } else if (char === '>') {
+            isTag = false;
+            element.innerHTML = temp;  // Only update innerHTML when the tag is complete
+          } else if (!isTag) {
+            element.innerHTML = temp;
+          }
+          i++;
+          if (!isTag) setTimeout(type, speed);
+          else type();
+        } else {
+          if (callback) callback();
+        }
+      }
+      type();
+    }
+
+    function startTyping() {
+      const headerElement = document.querySelector('.hero_header');
+      const taglineElement = document.querySelector('.tagline');
+
+      const headerHTML = 'EEStUdy <span class="light">Place by EESUAD</span>';
+      const taglineHTML = 'Share the knowledge with <span class="blue">you</span>';
+
+      headerElement.textContent = '';
+      taglineElement.textContent = '';
+
+      typeWriter(headerElement, headerHTML, 150, () => {
+        headerElement.classList.remove('typewriter');
+        console.log('Typing complete, pausing cursor animation for', headerElement);
+        typeWriter(taglineElement, taglineHTML, 150);
+      });
+    }
+
+    startTyping();
+    setInterval(startTyping, 20000); // Repeat every 20 seconds
+  });
+</script>
+
+<section class="mdx-container">
+  <div class="md-grid md-typeset">
+    <div class="mdx-hero">
+
+      <div class="mdx-hero__content">
+        <h1 style="color: antiquewhite;font-weight: 1000;">
+          <br>
+          欢迎来到EEStUdy Place
+        </h1>
+        <p style="color: antiquewhite;">The learning site you are viewing is created by EESU Academic Department. It is a place for students to learn and share knowledge.. We
+          hope to integrate knowledge we've consumed so far and continue sharing our course notes in the years to come
+        </p>
+        <a href="." title=""
+          class="md-button md-button--primary">
+          Quick start
+        </a>
+        <a href="insiders/" title="Material for MkDocs Insiders" class="md-button"
+          style="display: inline-block;margin: 10px;">
+          Get Insiders
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
@@ -296,19 +409,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Home
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
         
@@ -319,43 +419,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -378,34 +441,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -417,75 +452,7 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-                  
 
-  
-  
-
-
-<div><h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div></td></tr></table></div></div>
-
-
-
-
-
-
-
-  
-    
-  
-  
-    
-  
-
-
-  <aside class="md-source-file">
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="最后更新">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-11T10:57:38+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-11</span>
-  </span>
-
-    
-    
-      
-  <span class="md-source-file__fact">
-    <span class="md-icon" title="创建日期">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
-    </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-11T10:57:38+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-11</span>
-  </span>
-
-    
-    
-    
-  </aside>
-
-
-
-
-
-                
               </article>
             </div>
           
@@ -501,6 +468,7 @@ docs/
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -540,6 +508,7 @@ docs/
   </div>
 </footer>
       
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
