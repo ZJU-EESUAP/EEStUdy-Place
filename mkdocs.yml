@@ -6,6 +6,8 @@ copyright: Copyright &copy; EESUAD
 
 nav:
   - Home: index.md
+  - 专业必修课:
+    - 电路与电子技术: 专业必修课\电路与电子技术I与II\电路与电子技术.md
 
 theme:
   name: material
@@ -28,7 +30,7 @@ theme:
     - search.share
 
   icon:
-    repo: material/robot-love
+    repo: fontawesome/brands/github
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
