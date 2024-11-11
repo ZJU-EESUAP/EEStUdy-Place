@@ -1,0 +1,6 @@
+[data-md-color-scheme="youtube"] {
+    --md-primary-fg-color--light: #ECB7B7;
+    --md-primary-fg-color--dark:  #90030C;
+    background: linear-gradient(to right, rgba(255, 204, 0, 0.1), rgba(255, 102, 178, 0.1)); /* 使用 rgba 表示颜色，最后一个参数是透明度 */
+  }
+  
