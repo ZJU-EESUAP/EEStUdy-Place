@@ -1,0 +1,94 @@
+site_name: EEStUdy Place
+site_description: The learning site you are viewing is created by EESU Academic Department. It is a place for students to learn and share knowledge.
+repo_name: ZJU-EESUAD/EEStUdy-Place
+repo_url: https://github.com/ZJU-EESUAD/EEStUdy-Place
+copyright: Copyright &copy; EESUAD
+
+nav:
+  - Home: index.md
+
+theme:
+  name: material
+  language: zh
+  custom_dir: material\overrides
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+    - toc.follow
+    - navigation.path
+    - navigation.top
+    - navigation.tabs
+    - navigation.footer
+    - content.code.copy
+    - content.code.select
+    - search.suggest
+    - search.highlight
+    - search.share
+
+  icon:
+    repo: material/robot-love
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: indigo #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: light blue # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue #, [red, pink, purple, deep, purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey, blue, grey, black, white]
+      accent: indigo # [red, pink, purple, deep, purple, indigo, blue, light, blue, cyan, teal, green, light, green, lime, yellow, amber, orange, deep orange]
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.tasklist
+  - pymdownx.extra
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      auto_title: true
+      line_spans: __span
+      pygments_lang_class: true
+
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ZJU-EESUAD
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      enabled: true
+      strict: false
+  - mkdocs-pdf
+  - search

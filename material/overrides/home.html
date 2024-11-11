@@ -1,0 +1,123 @@
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<style>
+  .md-header {
+    position: initial
+  }
+
+  .md-main__inner {
+    margin: 0
+  }
+
+  .md-content {
+    display: none
+  }
+
+  body {
+    background-color: rgb(31, 48, 85);
+    /* 设置背景颜色为黑色 */
+    color: white;
+    /* 设置文字颜色为白色 */
+  }
+
+  @media screen and (min-width:60em) {
+    .md-sidebar--secondary {
+      display: none
+    }
+  }
+
+  @media screen and (min-width:76.25em) {
+    .md-sidebar--primary {
+      display: none·
+    }
+  }
+</style>
+<link href="stylesheets/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<section class="hero" id="hero">
+  <h2 class="typewriter hero_header" id="typewriter-header">JY-HF <span class="light">Learning Site___</span>
+  </h2>
+  <br>
+  <p class="typewriter tagline" id="typewriter-tagline">Share the knowledge to you and <span class="blue">Us</span></p>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    function typeWriter(element, text, speed, callback) {
+      let i = 0;
+      let isTag = false;
+      let temp = '';
+
+      function type() {
+        if (i < text.length) {
+          let char = text.charAt(i);
+          temp += char;
+
+          if (char === '<') {
+            isTag = true;
+          } else if (char === '>') {
+            isTag = false;
+            element.innerHTML = temp;  // Only update innerHTML when the tag is complete
+          } else if (!isTag) {
+            element.innerHTML = temp;
+          }
+          i++;
+          if (!isTag) setTimeout(type, speed);
+          else type();
+        } else {
+          if (callback) callback();
+        }
+      }
+      type();
+    }
+
+    function startTyping() {
+      const headerElement = document.querySelector('.hero_header');
+      const taglineElement = document.querySelector('.tagline');
+
+      const headerHTML = 'JY-HF <span class="light">Learning Site___</span>';
+      const taglineHTML = 'Share the knowledge to you and <span class="blue">Us</span>';
+
+      headerElement.textContent = '';
+      taglineElement.textContent = '';
+
+      typeWriter(headerElement, headerHTML, 150, () => {
+        headerElement.classList.remove('typewriter');
+        console.log('Typing complete, pausing cursor animation for', headerElement);
+        typeWriter(taglineElement, taglineHTML, 150);
+      });
+    }
+
+    startTyping();
+    setInterval(startTyping, 20000); // Repeat every 20 seconds
+  });
+</script>
+
+<section class="mdx-container">
+  <div class="md-grid md-typeset">
+    <div class="mdx-hero">
+
+      <div class="mdx-hero__content">
+        <h1 style="color: antiquewhite;font-family: 'Courier New', Courier, monospace;font-weight: 1000;">Welcome to the
+          coding space of JY-HF!</h1>
+        <p style="color: antiquewhite;font-family: 'Courier New', Courier, monospace;">{{ config.site_description }}. We
+          hope to integrate knowledge we've consumed so far and continue sharing our course notes in the years to come
+        </p>
+        <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}"
+          class="md-button md-button--primary">
+          Quick start
+        </a>
+        <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button"
+          style="display: inline-block;margin: 10px;">
+          Get Insiders
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block content %}
+{% endblock %}
+{% block footer %}
+{{ super() }}
+{% endblock %}
