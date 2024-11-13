@@ -143,7 +143,7 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"=== palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1302,65 +1302,27 @@
   <h1>电机与拖动</h1>
 
 <div><p># 电机与拖动</p>
-<p>=== "张欣怡 自动化1701"</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span>
-<span class="normal">28</span>
-<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code>**一、课程内容**
-
-​   电机与拖动这门课是我难得高绩点的一门课，分享一下我的学习经验。
-
-​   首先关于这门课的内容。电机的结构以及运行都涉及到三维空间建模和很多的图表，是一个和图像化十分相关的课程。我想这对偏向于数字推导的高手们来说可能会比较头痛，因为这门课的内容会要求我们在头脑中模拟出一个电机的结构，内部的核心结构之间的关系，它们是怎么运动的，会有怎样的联系和影响。由于我是一个更倾向于图像化思考，这门课对我来说反而使十分有趣的，想象一个电机在脑子里运作，还挺奇妙的。
-
-**二、学习方法和技巧**
-
-​   下面说一下在学习过程中我总结出来的比较有效的学习方法和技巧。学习方法和技巧这个东西因人而异，每个人都有不同的、适合自己的方法，下面只是介绍我在学习中的方法。
-
-​   “课前预习，课上认真听讲，课后复习。”这句话我想大家都是从小听到大，听到耳朵都要磨出茧子了。但是一直被反复的说要是证明它是一个比较通用且有效的方法，下面我也大致分着几阶段来说。
-
-（一）课前预习
-
-​   课前的预习是我一直没有养成的一个好习惯。但是在学期初的几次课，因为事情还不是很多，我在课前简单翻了翻课本，看了看这节课要讲的内容。的确在课上能感觉到可以很快地跟上老师，而且知道老师下一个会讲什么内容。但很遗憾后面事情多了以后也就没能坚持，也明显感觉到上课时更加吃力了，虽然课程内度增加也的确是原因之一。
-
-​   课前也不只是预习这节课将要讲什么，把上节课的内容复习一遍也是很有效的，可以和新的内容做一个好的衔接。毕竟过去了好几天，看起来像是全新的知识也说不定。相比于课前预习，“课前复习”我倒是常干，毕竟都是上课前一天晚上赶作业来着。
-
-（二）课上听讲
-
-​   课上认真跟着老师的思路走，是很高效的学习方法。但也的确，越难的课，越容易走神，难集中，因为听不懂，就撂笔不听了，想着等回去看书和ppt自学吧，反正那么多课也都考前两天自学出来了，我相信自己有这个能力。但我个人认为这门课上课跟着老师可以省更多的时间和精力，老师的讲解会首先帮你理解这是怎么回事，再告诉你为什么，再一步一步推导，得出最后的结论。虽然一般最后都是记最后这个结论和公式，但前面的过程其实是更重要的，理解了才能保证不会用错嘛。
-
-（三）课后复习
-
-​   课后的复习我主要就是靠课后作业，在写作业之前先把这次讲的内容理一遍，该记忆的内容背一背，尽可能不翻书完成作业。
-
-（四）考前复习
-
-​   最后说一说考前复习。考试复习我的方法主要是刷题，是个本办法，但对我来说确实有效果。刷的题主要来自于课本上的例题和课后题，这些题对于理解课本内容来说我觉得足够了，踏踏实实把它们搞定，考试应该还是很有把握了。具体地说，我会先过一遍理论内容，主要跟着课本来，ppt辅助，在这个过程中把例题刷一遍；接下来刷课后题，把错题还有原因标注出来；然后再把例题和课后题中的错题还有比较经典的提醒二刷；最后我会把记忆性的内容总结到一张纸上，考前时不时看一看，有助于记忆。当然有时间和精力，想三刷也不是不可以啦。
-</code></pre></div></td></tr></table></div></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">张欣怡 自动化1701</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>一、课程内容</strong></p>
+<p>​   电机与拖动这门课是我难得高绩点的一门课，分享一下我的学习经验。</p>
+<p>​   首先关于这门课的内容。电机的结构以及运行都涉及到三维空间建模和很多的图表，是一个和图像化十分相关的课程。我想这对偏向于数字推导的高手们来说可能会比较头痛，因为这门课的内容会要求我们在头脑中模拟出一个电机的结构，内部的核心结构之间的关系，它们是怎么运动的，会有怎样的联系和影响。由于我是一个更倾向于图像化思考，这门课对我来说反而使十分有趣的，想象一个电机在脑子里运作，还挺奇妙的。</p>
+<p><strong>二、学习方法和技巧</strong></p>
+<p>​   下面说一下在学习过程中我总结出来的比较有效的学习方法和技巧。学习方法和技巧这个东西因人而异，每个人都有不同的、适合自己的方法，下面只是介绍我在学习中的方法。</p>
+<p>​   “课前预习，课上认真听讲，课后复习。”这句话我想大家都是从小听到大，听到耳朵都要磨出茧子了。但是一直被反复的说要是证明它是一个比较通用且有效的方法，下面我也大致分着几阶段来说。</p>
+<p>（一）课前预习</p>
+<p>​   课前的预习是我一直没有养成的一个好习惯。但是在学期初的几次课，因为事情还不是很多，我在课前简单翻了翻课本，看了看这节课要讲的内容。的确在课上能感觉到可以很快地跟上老师，而且知道老师下一个会讲什么内容。但很遗憾后面事情多了以后也就没能坚持，也明显感觉到上课时更加吃力了，虽然课程内度增加也的确是原因之一。</p>
+<p>​   课前也不只是预习这节课将要讲什么，把上节课的内容复习一遍也是很有效的，可以和新的内容做一个好的衔接。毕竟过去了好几天，看起来像是全新的知识也说不定。相比于课前预习，“课前复习”我倒是常干，毕竟都是上课前一天晚上赶作业来着。</p>
+<p>（二）课上听讲</p>
+<p>​   课上认真跟着老师的思路走，是很高效的学习方法。但也的确，越难的课，越容易走神，难集中，因为听不懂，就撂笔不听了，想着等回去看书和ppt自学吧，反正那么多课也都考前两天自学出来了，我相信自己有这个能力。但我个人认为这门课上课跟着老师可以省更多的时间和精力，老师的讲解会首先帮你理解这是怎么回事，再告诉你为什么，再一步一步推导，得出最后的结论。虽然一般最后都是记最后这个结论和公式，但前面的过程其实是更重要的，理解了才能保证不会用错嘛。</p>
+<p>（三）课后复习</p>
+<p>​   课后的复习我主要就是靠课后作业，在写作业之前先把这次讲的内容理一遍，该记忆的内容背一背，尽可能不翻书完成作业。</p>
+<p>（四）考前复习</p>
+<p>​   最后说一说考前复习。考试复习我的方法主要是刷题，是个本办法，但对我来说确实有效果。刷的题主要来自于课本上的例题和课后题，这些题对于理解课本内容来说我觉得足够了，踏踏实实把它们搞定，考试应该还是很有把握了。具体地说，我会先过一遍理论内容，主要跟着课本来，ppt辅助，在这个过程中把例题刷一遍；接下来刷课后题，把错题还有原因标注出来；然后再把例题和课后题中的错题还有比较经典的提醒二刷；最后我会把记忆性的内容总结到一张纸上，考前时不时看一看，有助于记忆。当然有时间和精力，想三刷也不是不可以啦。</p>
+</div>
+</div>
+</div></div>
 
 
 
@@ -1383,7 +1345,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:07:35+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:11:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
   </span>
 
     
@@ -1393,7 +1355,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:07:35+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:11:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
   </span>
 
     

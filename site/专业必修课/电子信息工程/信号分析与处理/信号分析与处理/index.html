@@ -148,7 +148,7 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"=== palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1309,48 +1309,25 @@
 
 
 <div><h1 id="_1">信号分析与处理</h1>
-<p>=== "阮昊 电子信息工程1803"</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span>
-<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>**一、课程心得体会**
-
-​   当我们电气学子谈论起课程难度的时候，我相信没有太多人会拍着胸脯说：“信号真的很简单。”那么信号到底难在哪里呢？从我自己的经历来看：最开始上信号课的时候学的就是一些简单信号的定义和变换，这还是很容易理解的；之后就开始学傅里叶级数和傅里叶变换，因为先前数学基础的不扎实，我已经开始有点晕了；再往后就开始了离散系统的分析，DFS、DFT、DTFT、FFT轮番轰炸，这时我已经完全晕了。
-
-**二、学习方法与建议**
-
-​   因此我认为，在学习信号时最重要的一点就是不能在学习离散系统分析的时候失去学习的信心，这一块是难点，也是重点。起初不理解再正常不过，毕竟罗马不是一天建成的。随着讲课的深入，起初分离无关的知识点会逐渐融合，最后织成一张紧密的大网。如果你能理清楚上面这些变换之间的区别和关系，那么恭喜你，你已经离掌握信号更进了一步。信号里会有很多数学关系的推导，私以为推导的步骤是次要的，推导的逻辑才是最重要的——为什么已经有了FS，还需要DFS？为什么有了DFS还需要DTFT？为什么有了DTFT还需要DFT？为什么有了DFT还需要FFT？如果你能够顺利的解答这些问题，那么恭喜你，你已经基本上掌握了信号课最核心的内容。
-
-​   当然，上述的这一些话可以说是从应试的角度出发的。信号课的内容很难，但试卷出的并不那么困难，尤其是后续章节的内容，例如滤波器，出的题型通常都是比较固定的，解题的方式也比较单一。想要学好滤波器这部分的内容无疑是十分困难的，但如果仅仅是应试的话也就没有那么难了。话虽如此，我认为最好还是不要以过于功利的心态看待这门课程。不能只求解题，不求理解。信号的分析与处理不仅仅会在后续的课程中被无数次用到，而且是我们每个电气学子都应该拥有的专业技能之一。从概念和定义出发，不要心急，不要气馁，一步一步的学懂、学通，其实信号也没有那么难。
-</code></pre></div></td></tr></table></div>
-<p>=== "练润哲 电气工程及其自动化1801"</p>
-<div class="language-text highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>**一、课程心得体会**
-
-​   由于时间过去也有一年了，我对这门课的记忆或许不是特别准确了，具体内容重点我可以把去年老师的复习概要发给你，然后下面谈谈我对这门课的印象以及一些学习建议。
-
-**二、学习方法与建议**
-
-​   首先对这门课的整体印象：1.学习难度较难，部分内容还是挺抽象的（比如离散傅里叶变换、Z变换），要想完全搞清知识点的来龙去脉要花费很多功夫，所以要认真对待这门课程。2.光从考试的角度看，我个人觉得考试难度并不是太大（建议考前能听听张健老师的复习课，重点讲的挺明确的。另外老师出题也比较友善），关键是要真正掌握各个知识点的本质（即如何推导出、各种变换背后的物理含义）。3.这门课程还是比较重要的一门课程，之后科研实验中会用到挺多（比如传感器采集数据，你要如何选取合适采样频率，采集到数据为离散的数字信息所以改如何进行快速处理，这门课都会告诉你个大概）。4.从学习层次来看，这门课先将基础理论知识，再将其具体的应用，这两者中前者是重点，占课程的大半时间，后者较为简单，掌握具体的计算方法步骤即可；然后前面的基础理论讲的就是傅里叶变换及其变形，从周期到非周期、连续到离散、频域到复频域。学完之后你会发现课程分布是非常合理的，开始时与我们之前在数学课上学的傅里叶变换相关，但这仅仅时对一个连续函数的变换，实际工程运用中（芯片处理）信号都是离散信号，且计算速度、存储都有较高要求，所以就有了离散傅里叶变换和FFT（快速傅里叶变换），所以我个人觉得这本书有种纯数学到工程应用间过度的味道。
-
-​   下面简单谈谈对这门课的学习建议：1.前面也提到了这门课是以傅里叶变换为基础展开的，所以之前相关的微积分知识基础一定要掌握好（不过也放心，不会有太复杂的计算，只要相关概念、运算方法清楚就好）。2.这门课的难点我觉得就是对各种变换的理解以及这些变换之间的联系。如果单独看各个变换，那很容易概念混乱、公式记忆不清，所以务必要搞清各个变换之间的联系，如连续傅里叶级数（CFS）怎么推导出连续傅里叶变换（CFT），连续傅里叶变换怎么推导出离散傅里叶变换。只有掌握了各种变换之间的联系，才能搭建起自己对这门课的知识框架。3.学习各种变换时，要学着和具体的物理意义联系起来，不然会很空洞抽象，学着累效果也不佳，所以我建议学习的时候可以多用matlab进行一些图像仿真（这门课也有相关实验仿真），这有助于你对各种变换的效果有直观的感受。4.另外还有一些概念，如采样混叠、泄露等我觉得也有难度，当初我学习时想理解好它的本质还是有较大困难，这方面也要注意一下。
-
-​   最后，我认为这门课虽然有一定难度（肯定比偏微分、复变简单），但认真学肯定能取得好成绩的，所以要有自信。祝学弟学妹们最后都能取得满意成绩，收获高的绩点。
-</code></pre></div></td></tr></table></div></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">阮昊 电子信息工程1803</label><label for="__tabbed_1_2">练润哲 电气工程及其自动化1801</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>一、课程心得体会</strong></p>
+<p>​   当我们电气学子谈论起课程难度的时候，我相信没有太多人会拍着胸脯说：“信号真的很简单。”那么信号到底难在哪里呢？从我自己的经历来看：最开始上信号课的时候学的就是一些简单信号的定义和变换，这还是很容易理解的；之后就开始学傅里叶级数和傅里叶变换，因为先前数学基础的不扎实，我已经开始有点晕了；再往后就开始了离散系统的分析，DFS、DFT、DTFT、FFT轮番轰炸，这时我已经完全晕了。</p>
+<p><strong>二、学习方法与建议</strong></p>
+<p>​   因此我认为，在学习信号时最重要的一点就是不能在学习离散系统分析的时候失去学习的信心，这一块是难点，也是重点。起初不理解再正常不过，毕竟罗马不是一天建成的。随着讲课的深入，起初分离无关的知识点会逐渐融合，最后织成一张紧密的大网。如果你能理清楚上面这些变换之间的区别和关系，那么恭喜你，你已经离掌握信号更进了一步。信号里会有很多数学关系的推导，私以为推导的步骤是次要的，推导的逻辑才是最重要的——为什么已经有了FS，还需要DFS？为什么有了DFS还需要DTFT？为什么有了DTFT还需要DFT？为什么有了DFT还需要FFT？如果你能够顺利的解答这些问题，那么恭喜你，你已经基本上掌握了信号课最核心的内容。</p>
+<p>​   当然，上述的这一些话可以说是从应试的角度出发的。信号课的内容很难，但试卷出的并不那么困难，尤其是后续章节的内容，例如滤波器，出的题型通常都是比较固定的，解题的方式也比较单一。想要学好滤波器这部分的内容无疑是十分困难的，但如果仅仅是应试的话也就没有那么难了。话虽如此，我认为最好还是不要以过于功利的心态看待这门课程。不能只求解题，不求理解。信号的分析与处理不仅仅会在后续的课程中被无数次用到，而且是我们每个电气学子都应该拥有的专业技能之一。从概念和定义出发，不要心急，不要气馁，一步一步的学懂、学通，其实信号也没有那么难。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>一、课程心得体会</strong></p>
+<p>​   由于时间过去也有一年了，我对这门课的记忆或许不是特别准确了，具体内容重点我可以把去年老师的复习概要发给你，然后下面谈谈我对这门课的印象以及一些学习建议。</p>
+<p><strong>二、学习方法与建议</strong></p>
+<p>​   首先对这门课的整体印象：1.学习难度较难，部分内容还是挺抽象的（比如离散傅里叶变换、Z变换），要想完全搞清知识点的来龙去脉要花费很多功夫，所以要认真对待这门课程。2.光从考试的角度看，我个人觉得考试难度并不是太大（建议考前能听听张健老师的复习课，重点讲的挺明确的。另外老师出题也比较友善），关键是要真正掌握各个知识点的本质（即如何推导出、各种变换背后的物理含义）。3.这门课程还是比较重要的一门课程，之后科研实验中会用到挺多（比如传感器采集数据，你要如何选取合适采样频率，采集到数据为离散的数字信息所以改如何进行快速处理，这门课都会告诉你个大概）。4.从学习层次来看，这门课先将基础理论知识，再将其具体的应用，这两者中前者是重点，占课程的大半时间，后者较为简单，掌握具体的计算方法步骤即可；然后前面的基础理论讲的就是傅里叶变换及其变形，从周期到非周期、连续到离散、频域到复频域。学完之后你会发现课程分布是非常合理的，开始时与我们之前在数学课上学的傅里叶变换相关，但这仅仅时对一个连续函数的变换，实际工程运用中（芯片处理）信号都是离散信号，且计算速度、存储都有较高要求，所以就有了离散傅里叶变换和FFT（快速傅里叶变换），所以我个人觉得这本书有种纯数学到工程应用间过度的味道。</p>
+<p>​   下面简单谈谈对这门课的学习建议：1.前面也提到了这门课是以傅里叶变换为基础展开的，所以之前相关的微积分知识基础一定要掌握好（不过也放心，不会有太复杂的计算，只要相关概念、运算方法清楚就好）。2.这门课的难点我觉得就是对各种变换的理解以及这些变换之间的联系。如果单独看各个变换，那很容易概念混乱、公式记忆不清，所以务必要搞清各个变换之间的联系，如连续傅里叶级数（CFS）怎么推导出连续傅里叶变换（CFT），连续傅里叶变换怎么推导出离散傅里叶变换。只有掌握了各种变换之间的联系，才能搭建起自己对这门课的知识框架。3.学习各种变换时，要学着和具体的物理意义联系起来，不然会很空洞抽象，学着累效果也不佳，所以我建议学习的时候可以多用matlab进行一些图像仿真（这门课也有相关实验仿真），这有助于你对各种变换的效果有直观的感受。4.另外还有一些概念，如采样混叠、泄露等我觉得也有难度，当初我学习时想理解好它的本质还是有较大困难，这方面也要注意一下。</p>
+<p>​   最后，我认为这门课虽然有一定难度（肯定比偏微分、复变简单），但认真学肯定能取得好成绩的，所以要有自信。祝学弟学妹们最后都能取得满意成绩，收获高的绩点。</p>
+</div>
+</div>
+</div></div>
 
 
 
@@ -1373,7 +1350,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:07:34+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:11:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
   </span>
 
     
@@ -1383,7 +1360,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:07:35+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-13T09:11:55+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-13</span>
   </span>
 
     
