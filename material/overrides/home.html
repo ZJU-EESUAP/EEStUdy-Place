@@ -52,9 +52,9 @@
           let char = text.charAt(i);
           temp += char;
 
-          if (char === '<') {
+          if (char ===  '<') {
             isTag = true;
-          } else if (char === '>') {
+          } else if (char ===  '>') {
             isTag = false;
             element.innerHTML = temp;  // Only update innerHTML when the tag is complete
           } else if (!isTag) {

@@ -23,8 +23,8 @@ async>
 
     // Set palette on initial load
     var palette = __md_get("__palette")
-    if (palette && typeof palette.color === "object") {
-        var theme = palette.color.scheme === "slate"
+    if (palette && typeof palette.color ===  "object") {
+        var theme = palette.color.scheme ===  "slate"
             ? "transparent_dark"
             : "light"
 
@@ -37,8 +37,8 @@ async>
         var ref = document.querySelector("[data-md-component=palette]")
         ref.addEventListener("change", function () {
             var palette = __md_get("__palette")
-            if (palette && typeof palette.color === "object") {
-                var theme = palette.color.scheme === "slate"
+            if (palette && typeof palette.color ===  "object") {
+                var theme = palette.color.scheme ===  "slate"
                     ? "transparent_dark"
                     : "light"
 
