@@ -1,4 +1,14 @@
 /* Hero Section */
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: solid black;
+    /* Cursor effect */
+    animation: blink-caret 0.75s step-end infinite;
+    word-wrap: break-word;
+    /* Ensure words break and wrap correctly */
+}
+
 .hero {
     font-family: "Source Sans Pro", sans-serif;
     background-color: #CBE3F7;
@@ -40,66 +50,10 @@
     /* Default font size */
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .hero_header {
-        font-size: 1.8rem;
-    }
-
-    .tagline {
-        font-size: 1.25rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero_header {
-        font-size: 1.55rem;
-    }
-
-    .tagline {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero_header {
-        font-size: 1.22rem;
-        /* Adjust width for smaller screens */
-        letter-spacing: 2px;
-    }
-
-    .tagline {
-        font-size: 0.675rem;
-    }
-}
-
-
-.typewriter {
-    display: inline-block;
-    overflow: hidden;
-    border-right: solid black;
-    /* Cursor effect */
-    animation: blink-caret 0.75s step-end infinite;
-    word-wrap: break-word;
-    /* Ensure words break and wrap correctly */
-}
-
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent;
-    }
-
-    50% {
-        border-color: black;
-    }
-}
-
-
 .about {
-    padding-left: 100px;
-    padding-right: 100px;
+    width:85%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
     margin-top: 10px;
 }
@@ -117,4 +71,62 @@
     font-size: 1.6em;
     line-height: 1.5;
     letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .hero_header {
+        font-size: 1.67rem;
+    }
+
+    .tagline {
+        font-size: 1.25rem;
+    }
+
+    .about h2{
+        font-size: 3.6em;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero_header {
+        font-size: 1.53rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+    .about h2{
+        font-size: 3em;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero_header {
+        font-size: 1.22rem;
+        /* Adjust width for smaller screens */
+        letter-spacing: 2px;
+    }
+
+    .tagline {
+        font-size: 0.675rem;
+    }
+    .about h2{
+        font-size: 2.5em;
+        letter-spacing: 2px;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
 }
