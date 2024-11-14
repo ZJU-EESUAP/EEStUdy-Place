@@ -7,7 +7,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    height: 500px;
+    height: 450px;
     width: 100%;
 }
 
@@ -63,7 +63,7 @@
 
 @media (max-width: 480px) {
     .hero_header {
-        font-size: 1.3rem;
+        font-size: 1.22rem;
         /* Adjust width for smaller screens */
         letter-spacing: 2px;
     }
@@ -94,4 +94,27 @@
     50% {
         border-color: black;
     }
+}
+
+
+.about {
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.about h2 {
+    color: #9dc9fce0;
+    font-size: 4em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.about p {
+    color: white;
+    font-size: 1.6em;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
