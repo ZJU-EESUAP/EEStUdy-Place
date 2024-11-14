@@ -1,6 +1,8 @@
-{% extends "main.html" %}
+{% extends "base.html" %}
+
 {% block tabs %}
-{{ super() }}
+{{super()}}
+
 <style>
   .md-header {
     position: initial
@@ -33,9 +35,11 @@
     }
   }
 </style>
-<link href="stylesheets/singlePageTemplate.css" rel="stylesheet" type="text/css">
+
+<link href="assets/stylesheets/home.css" rel="stylesheet" type="text/css">
 <section class="hero" id="hero">
-  <h2 class="typewriter hero_header" id="typewriter-header">EEStUdy <span class="light">Place by <span style="color: #c41502e0;">EESUAD</span></span>
+  <h2 class="typewriter hero_header" id="typewriter-header">EEStUdy Place <span class="light">by</span> <span
+      style="color: #c41502e0;">EESUAD</span>
   </h2>
   <br>
   <p class="typewriter tagline" id="typewriter-tagline">Share the knowledge with <span class="blue">you</span></p>
@@ -52,9 +56,9 @@
           let char = text.charAt(i);
           temp += char;
 
-          if (char ===  '<') {
+          if (char === '<') {
             isTag = true;
-          } else if (char ===  '>') {
+          } else if (char === '>') {
             isTag = false;
             element.innerHTML = temp;  // Only update innerHTML when the tag is complete
           } else if (!isTag) {
@@ -74,7 +78,7 @@
       const headerElement = document.querySelector('.hero_header');
       const taglineElement = document.querySelector('.tagline');
 
-      const headerHTML = 'EEStUdy <span class="light">Place by <span style="color: #c41502e0;">EESUAD</span></span>';
+      const headerHTML = 'EEStUdy Place <span class="light">by</span> <span style="color: #c41502e0;">EESUAD</span>';
       const taglineHTML = 'Share the knowledge with <span class="blue">you</span>';
 
       headerElement.textContent = '';
@@ -92,35 +96,17 @@
   });
 </script>
 
-<section class="mdx-container">
-  <div class="md-grid md-typeset">
-    <div class="mdx-hero">
-
-      <div class="mdx-hero__content">
-        <h1 style="color: antiquewhite;font-weight: 1000;">
-          <br>
-          欢迎来到EEStUdy Place
-        </h1>
-        <p style="color: antiquewhite;">{{ config.site_description }}. We
-          hope to integrate knowledge we've consumed so far and continue sharing our course notes in the years to come
-        </p>
-        <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}"
-          class="md-button md-button--primary">
-          Quick start
-        </a>
-        <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders" class="md-button"
-          style="display: inline-block;margin: 10px;">
-          Get Insiders
-        </a>
-
-      </div>
-    </div>
-  </div>
+<section class="about" id="about">
+  <h2>关于 <span style="letter-spacing: 4px;  color: #eae1fe;">EEStUdy Place</span></h2>
+  <p>EEStUdy Place 是由浙江大学<span style="font-weight: bold;color: #fffce4;">电气工程学院学生会学术部</span>搭建的资源的平台。
+    我们将总结电气工程学院所包含三个专业（电气工程成及其自动化、电子信息工程、自动化）的所有专业课程的课程攻略、学长学姐心得等内容</p>
+  <p>无论您是在寻找教程、探索答案，还是只是了解电气工程学院，EEStUdy Place 都希望能满足您的需求。</p>
+  <p>我们也希望你能成为 网站成员的一部分，
+    点击<a href=".\我想投稿！\我想投稿\index.html" style="font-weight:bold; color: aqua;">我要投稿！</a>查看详情</p>
 </section>
+
+
 {% endblock %}
+
 {% block content %}
-{{ super() }}
-{% endblock %}
-{% block footer %}
-{{ super() }}
 {% endblock %}

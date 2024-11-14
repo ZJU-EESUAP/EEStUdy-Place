@@ -63,7 +63,7 @@
 
 @media (max-width: 480px) {
     .hero_header {
-        font-size: 1.3rem;
+        font-size: 1.22rem;
         /* Adjust width for smaller screens */
         letter-spacing: 2px;
     }

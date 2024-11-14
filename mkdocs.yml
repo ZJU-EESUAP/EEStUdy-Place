@@ -98,13 +98,13 @@ theme:
         name: Switch to light mode
 
 extra_javascript:
-  - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - assets/javascripts/katex.js
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
-  - stylesheets/extra.css
+  - assets/stylesheets/extra.css
 
 markdown_extensions:
   - admonition
