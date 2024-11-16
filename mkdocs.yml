@@ -48,7 +48,10 @@ nav:
       - 计算机软件技术基础: 专业选修课\电子信息工程\计算机软件技术基础\计算机软件技术基础.md
       - 科学创新方法论及实践: 专业选修课\电子信息工程\科学创新方法论及实践\科学创新方法论及实践.md
       - DSP原理与应用: 专业选修课\电子信息工程\DSP原理与应用\DSP原理与应用.md
-  - All In One: All In One\All in one.md
+  - All In One: 
+    - About: All In One\About.md
+    - CC98 全科目就读感想: All In One\CC98.md
+    - 个人网站汇总帖: All In One\Website.md
   - EEFuture:
     - 逐梦手册: EEFuture\逐梦手册.md
     - 学习手册: EEFuture\学习手册.md
